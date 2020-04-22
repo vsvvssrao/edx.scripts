@@ -1,26 +1,10 @@
 #!/bin/bash
 #---------------------------------------------------------
-# written by: lawrence mcdaniel
-#             https://lawrencemcdaniel.com
-#             https://blog.lawrencemcdaniel.com
-#
-# date:       march 21, 2019
 #
 # usage:      Install Tutor and its prerequisites.
 #             curl -sSL https://raw.githubusercontent.com/lpm0073/edx.scripts/master/tutor.install.sh | bash -e
 #
 # reference:  https://docs.tutor.overhang.io/quickstart.html
-#
-# Notes:
-#     AWS EC2 | t2-large | 50gb ebs | Ubuntu 16.04
-#
-#     Add dns records before your run this script. All of your dns records
-#     should be 'A' records and should point to the same IP address.
-#      - Root:        tutor.lawrencemcdaniel.com
-#      - LMS:         tutor-lms.lawrencemcdaniel.com
-#      - LMS preview: preview.tutor-lms.lawrencemcdaniel.com
-#      - Notes:       notes.tutor-lms.lawrencemcdaniel.com
-#      - CMS:         tutor-studio.lawrencemcdaniel.com
 #
 # Trouble Shooting:
 #     ~/.local/share/tutor/env/apps/openedx/config
@@ -65,7 +49,7 @@ docker-compose --version
 
 #Install Tutor: https://docs.tutor.overhang.io/install.html
 #================================
-sudo curl -L "https://github.com/overhangio/tutor/releases/download/v3.11.6/tutor-$(uname -s)_$(uname -m)" -o /usr/local/bin/tutor
+sudo curl -L "https://github.com/overhangio/tutor/releases/download/v3.11.12/tutor-$(uname -s)_$(uname -m)" -o /usr/local/bin/tutor
 sudo chmod +x /usr/local/bin/tutor
 
 echo "===================================================================="
